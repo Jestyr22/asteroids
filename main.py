@@ -17,6 +17,7 @@ def main():
                 return #Makes the windows Close button correctly exit the game
         screen.fill("black")
         player.draw(screen)
+        player.update(dt)
         pygame.display.flip()
         #Clock.tick(60) Might not be needed, instructions said to do it in two lines but I think I can do it all in one?
         dt = (Clock.tick(60) / 1000) #Limit frames to 60FPS, assigns DT the value in seconds (Hence the / 1000, otherwise it would be milliseconds)
